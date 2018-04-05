@@ -8,6 +8,9 @@ import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { UploadComponent } from './upload/upload.component';
+import {ImageService} from './services/image.service';
+import {AuthenticationService} from './services/authentication.service';
+import {UploadService} from './services/upload.service';
 
 
 @NgModule({
@@ -22,7 +25,7 @@ import { UploadComponent } from './upload/upload.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ImageService, AuthenticationService, UploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
